@@ -1,0 +1,15 @@
+File: invoice_123456_attachment_1340634_Hillyard_Invoice-_604370054_-_ASPIRE_TRIUMPH_TECHN.pdf
+Here is the table from the document in tab-separated format:
+
+```
+ITEM	MATERIAL DESCRIPTION	QUANTITY	UNIT PRICE	AMOUNT
+0010	LRQ4348200K LINER 56GAL 43X48 1.7MIL BLK 100/CS MQ	2 CS	45.94	91.88
+0020	HIL0052206 TOP SHAPE	2 GAL	27.42	54.84
+0030	HIL0014706 DEVASTATOR	4 GAL	47.84	191.36
+	Subtotal		338.08
+	Shipping		0.00
+	Tax Amount		0.00
+	Gross Price		32.96
+	Total Amount Due	371.04
+```
+============================================================
