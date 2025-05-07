@@ -82,7 +82,8 @@ def run_coupa_batch(req: CoupaRunRequest):
         "message": "Run complete",
         "invoice_count": len(invoice_data),
         "output_pickle": pickle_path,
-        "attachments_folder": attachments_folder
+        "attachments_folder": attachments_folder,
+        "run_name": run_name
     }
 
 @router.post("/invoice/{invoice_id}")
