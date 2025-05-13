@@ -1,6 +1,6 @@
 .env
 ./downloads/
-./audit_runs/
+completed_files.txt
 __pycache__/
 *.pyc
-completed_files.txt
+./audit_runs/
