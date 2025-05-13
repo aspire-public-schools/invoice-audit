@@ -1,3 +1,5 @@
 .env
 ./downloads/
 completed_files.txt
+__pycache__/
+*.pyc
