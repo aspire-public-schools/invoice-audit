@@ -1,3 +1,1 @@
 InvoiceID	AttachmentID	Filename
-123456	1340558	invoice_123456_attachment_1340558_invoice.eml
-123456	1340634	invoice_123456_attachment_1340634_Hillyard_Invoice-_604370054_-_ASPIRE_TRIUMPH_TECHN.pdf
