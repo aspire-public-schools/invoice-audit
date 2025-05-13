@@ -13,3 +13,20 @@ ITEM	MATERIAL DESCRIPTION	QUANTITY	UNIT PRICE	AMOUNT
 	Total Amount Due	371.04
 ```
 ============================================================
+File: invoice_330023_attachment_2426716_Vista_s1291211.pdf
+Here is the table from the document in tab-separated format:
+
+```plaintext
+Purchase Order No.	Customer ID	Salesperson ID	Shipping Method	Payment Terms	Req Ship Date	Master No.
+100754	ASP1005	PWILLIAMS	BESTWY	Net 30 Days	6/24/2024	6.098.406
+
+Quantity	Item Number	Description	Unit Price	Ext. Price
+8	978-1-54337-063-8	Senderos 2023 L1 Practice Workbook (10-pack)	$299.95	$2,399.60
+8	978-1-54337-087-4	Senderos 2023 L2 Practice Workbook (10-pack)	$299.95	$2,399.60
+
+Subtotal	Misc	Tax	Freight	Amount Received	Total
+$4,799.20	$0.00	$425.96	$227.50	$0.00	$5,452.66
+```
+
+Note: The table is split into three sections for clarity, as the original document contains multiple tables that are logically grouped together.
+============================================================

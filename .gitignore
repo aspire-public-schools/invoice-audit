@@ -1,5 +1,9 @@
 .env
 ./downloads/
+<<<<<<< HEAD
 completed_files.txt
 __pycache__/
 *.pyc
+=======
+./audit_runs/
+>>>>>>> 063b6c4e789134fa9fb0fa9f4b5563a2bef202f9
