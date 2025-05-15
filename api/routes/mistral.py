@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from mistral.processors import process_all_pdfs
-from mistral.processors import process_all_pdfs
+from mistral.processors import process_grouped_invoices
 from pydantic import BaseModel
 from coupa.utils import sanitize_filename
 import os
@@ -28,7 +28,7 @@ def process_ocr_run(req: ProcessRunRequest):
     if not os.path.exists(attachments_dir):
         raise HTTPException(status_code=404, detail=f"Attachments folder for run '{run_name}' not found.")
 
-    process_all_pdfs(
+    process_grouped_invoices(
         download_folder=attachments_dir,
         output_file=output_file,
         max_chunk_size=req.chunk_size,
