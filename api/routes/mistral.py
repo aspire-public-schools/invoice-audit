@@ -28,7 +28,7 @@ def process_ocr_run(req: ProcessRunRequest):
     if not os.path.exists(attachments_dir):
         raise HTTPException(status_code=404, detail=f"Attachments folder for run '{run_name}' not found.")
 
-    process_grouped_invoices(
+    process_all_pdfs(
         download_folder=attachments_dir,
         output_file=output_file,
         max_chunk_size=req.chunk_size,
