@@ -1,5 +1,7 @@
 from mistral.uploader import client
 
+#this is the second step
+
 def ask_pdf_questions(prompt_text: str, document_url: str, model_name: str = "mistral-small-latest") -> str:
     """
     Submit a prompt and a document URL to Mistral and return the response text.

@@ -6,6 +6,7 @@ from mistral.prompts import ask_pdf_questions
 from mistral.utils import extract_invoice_id, save_llm_table_to_file, chunked
 from collections import defaultdict
 from mistral.constants import ALLOWED_EXTENSIONS
+import ast
 
 
 def process_all_pdfs(
@@ -49,6 +50,12 @@ def process_all_pdfs(
 
                     print(f"🤖 Asking LLM: {prompt_text}")
                     response = ask_pdf_questions(prompt_text, url)
+                    
+                    print(f"🤖 LLM Response: {response}")
+                    data = ast.literal_eval(response)
+
+                    print(f"🤖 python dictionary: {data}")
+
 
                     out_file.write(f"File: {file_name}\n{response}\n{'='*60}\n")
                     log.write(f"{file_name}\n")
@@ -80,6 +87,8 @@ def process_grouped_invoices(download_folder, output_file, log_file="completed_i
     f for f in all_files
     if os.path.isfile(f) and os.path.splitext(f)[1].lower() in ALLOWED_EXTENSIONS
     ]
+
+    print(all_files)
 
     invoice_map = defaultdict(list)
     for path in valid_files:

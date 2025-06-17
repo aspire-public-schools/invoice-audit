@@ -23,9 +23,13 @@ def get_invoice_details(invoice_id, access_token=None):
         log(f"Failed to retrieve invoice details for invoice {invoice_id}. Status code: {response.status_code}", "error")
         log(response.text, "error")
     else:
+        log(response.text)
         log(f"Successfully retrieved invoice details for invoice {invoice_id}.", "success")
 
     return response
+
+
+#USE THIS FUNCTION ONLY IF YOU NEED TO READ DATA FROM THE PYTHON OBJECT AFTER THE PROGRAM HAS EXECUTED - THIS ALLOWS RETAINING DATA ON DISK    
 
 def save_invoice_details_as_pickle(invoice_ids, output_pickle="invoice_details.pkl"):
     access_token = get_access_token()

@@ -4,3 +4,11 @@ completed_files.txt
 __pycache__/
 *.pyc
 ./audit_runs/
+*.pkl
+*.txt
+*.pdf
+__pycache__
+*.xlsx
+mistral/__pycache__/
+coupa/__pycache__/
+*.msg

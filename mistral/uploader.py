@@ -8,6 +8,9 @@ load_dotenv()
 api_key = os.getenv("MISTRAL_API_KEY")
 client = Mistral(api_key=api_key)
 
+
+#This is the first step 
+
 def upload_pdf(filename, purpose="ocr"):
     """
     Upload a PDF to Mistral for OCR purposes and return the signed document URL.
