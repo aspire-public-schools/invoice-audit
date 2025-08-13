@@ -12,3 +12,4 @@ __pycache__
 mistral/__pycache__/
 coupa/__pycache__/
 *.msg
+audit_venv/

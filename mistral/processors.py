@@ -52,10 +52,9 @@ def process_all_pdfs(
                     response = ask_pdf_questions(prompt_text, url)
                     
                     print(f"🤖 LLM Response: {response}")
-                    data = ast.literal_eval(response)
-
-                    print(f"🤖 python dictionary: {data}")
-
+                    # Remove this line that's causing the error:
+                    # data = ast.literal_eval(response)
+                    # print(f"🤖 python dictionary: {data}")
 
                     out_file.write(f"File: {file_name}\n{response}\n{'='*60}\n")
                     log.write(f"{file_name}\n")
