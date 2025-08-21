@@ -48,7 +48,7 @@ def process_ocr_run(req: ProcessRunRequest):
     }
 
 
-@router.get("/results")
+@router.post("/results")
 def get_ocr_results(req: GetResultsRequest):
     """
     Retrieve and parse the OCR results for a specific run.
