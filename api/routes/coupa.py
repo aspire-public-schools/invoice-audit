@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from typing import List
 from coupa.invoices import get_invoice_details
 from coupa.attachments import download_all_invoice_attachments, download_invoice_attachment, download_multiple_invoices, get_invoice_attachments
-from coupa.utils import extract_filename_from_url, sanitize_filename, log
+from coupa.utils import extract_filename_from_url, sanitize_filename, log, parse_invoice_ids
 from coupa.auth import get_access_token
 
 
@@ -20,7 +20,8 @@ class CoupaRunRequest(BaseModel):
 
 @router.post("/run")
 def run_coupa_batch(req: CoupaRunRequest):
-    invoice_ids = req.invoice_ids
+    # Parse invoice IDs to handle comma-separated values from Power Automate
+    invoice_ids = parse_invoice_ids(req.invoice_ids)
     run_name = sanitize_filename(req.run_name)
 
     # Set up folders
@@ -103,12 +104,15 @@ class BulkDownloadRequest(BaseModel):
 
 @router.post("/invoices/download")
 def bulk_download_invoices(req: BulkDownloadRequest):
+    # Parse invoice IDs to handle comma-separated values from Power Automate
+    invoice_ids = parse_invoice_ids(req.invoice_ids)
+    
     download_multiple_invoices(
-        req.invoice_ids,
+        invoice_ids,
         download_folder=req.download_folder,
         log_file=req.log_file
     )
     return {
-        "message": f"Downloaded attachments for {len(req.invoice_ids)} invoice(s).",
+        "message": f"Downloaded attachments for {len(invoice_ids)} invoice(s).",
         "log_file": req.log_file
     }
